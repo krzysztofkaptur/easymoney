@@ -1,7 +1,5 @@
+import { Label } from '@/components/ui/label'
+
 export default function Home() {
-  return (
-    <main>
-      <form></form>
-    </main>
-  )
+  return <main></main>
 }
