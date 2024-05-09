@@ -1,7 +1,5 @@
+import { Input } from '@/components/ui/input'
+
 export default function Home() {
-  return (
-    <main>
-      <form></form>
-    </main>
-  )
+  return <main></main>
 }
