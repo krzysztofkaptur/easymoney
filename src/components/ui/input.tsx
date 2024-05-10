@@ -1,25 +1,51 @@
-import * as React from "react"
+'use client'
 
-import { cn } from "@/lib/utils"
+import { InputHTMLAttributes, forwardRef, useState } from 'react'
+import { Eye, EyeOff } from 'lucide-react'
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+import { cn } from '@/lib/utils'
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+
+const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
+    const [showPassword, setShowPassword] = useState(false)
+
     return (
-      <input
-        type={type}
+      <div
         className={cn(
-          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          'flex items-center rounded-md border border-input bg-background px-3 py-2',
           className
         )}
-        ref={ref}
-        {...props}
-      />
+      >
+        <input
+          type={showPassword ? 'text' : type}
+          className="w-full  text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+          ref={ref}
+          {...props}
+        />
+        {
+          <>
+            {type === 'password' && !showPassword ? (
+              <button onClick={() => setShowPassword(true)}>
+                <Eye />
+              </button>
+            ) : null}
+          </>
+        }
+        {
+          <>
+            {type === 'password' && showPassword ? (
+              <button onClick={() => setShowPassword(false)}>
+                <EyeOff />
+              </button>
+            ) : null}
+          </>
+        }
+      </div>
     )
   }
 )
-Input.displayName = "Input"
+Input.displayName = 'Input'
 
 export { Input }
