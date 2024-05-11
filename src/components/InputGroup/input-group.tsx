@@ -1,3 +1,5 @@
+import { ForwardedRef, forwardRef } from 'react'
+
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 
@@ -9,13 +11,25 @@ type Props = {
   type?: React.HTMLInputTypeAttribute
 }
 
-export const InputGroup = (props: Props) => {
-  const { id, name, label, type = 'text', required = false } = props
+const InputGroup = forwardRef(
+  (props: Props, ref: ForwardedRef<HTMLInputElement>) => {
+    const { id, name, label, type = 'text', required = false, ...rest } = props
 
-  return (
-    <div>
-      <Label htmlFor={id ?? name}>{required ? `${label}*` : label}</Label>
-      <Input id={id ?? name} name={name ?? name} type={type} />
-    </div>
-  )
-}
+    return (
+      <div>
+        <Label htmlFor={id ?? name}>{required ? `${label}*` : label}</Label>
+        <Input
+          ref={ref}
+          id={id ?? name}
+          name={name ?? name}
+          type={type}
+          {...rest}
+        />
+      </div>
+    )
+  }
+)
+
+InputGroup.displayName = 'InputGroup'
+
+export { InputGroup }
