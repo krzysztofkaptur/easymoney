@@ -1,7 +1,4 @@
 {
-  "home": {
-    "title": "Home page"
-  },
   "login": {
     "email": "Email",
     "password": "Password",
