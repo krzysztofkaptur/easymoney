@@ -2,8 +2,8 @@
 
 import { useForm } from 'react-hook-form'
 
-import { Form } from '@/components/Form'
-import { InputGroup } from '@/components/InputGroup'
+import { Form } from '@/app/[lang]/components/Form'
+import { InputGroup } from '@/app/[lang]/components/InputGroup'
 import { RegisterSchema } from '@/lib/validation/schemas/auth'
 import { schemaResolver } from '@/lib/validation/resolver'
 
