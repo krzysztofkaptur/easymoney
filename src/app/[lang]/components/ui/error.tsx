@@ -1,5 +1,3 @@
-import type { FieldError, FieldErrorsImpl, Merge } from 'react-hook-form'
-
 type Props = {
   error?: string
 }
