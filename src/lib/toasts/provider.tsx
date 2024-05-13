@@ -5,10 +5,10 @@ import { Toaster } from 'react-hot-toast'
 export const ToasterProvider = () => {
   return (
     <Toaster
-      position="top-right"
+      position='top-right'
       reverseOrder={false}
       gutter={8}
-      containerClassName=""
+      containerClassName=''
       containerStyle={{}}
       toastOptions={{
         // Define default options
@@ -16,8 +16,8 @@ export const ToasterProvider = () => {
         duration: 5000,
         style: {
           background: '#363636',
-          color: '#fff'
-        }
+          color: '#fff',
+        },
       }}
     />
   )

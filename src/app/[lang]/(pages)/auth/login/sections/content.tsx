@@ -8,18 +8,18 @@ import { LoginSchema } from '@/lib/validation/schemas/auth'
 import { schemaResolver } from '@/lib/validation/resolver'
 import { successToast } from '@/lib/toasts'
 
-import { type getDictionary } from "@/lib/i18n/get-dictionary";
+import { type getDictionary } from '@/lib/i18n/get-dictionary'
 
 export const LoginContent = ({
   t,
 }: {
-  t: Awaited<ReturnType<typeof getDictionary>>["login"];
+  t: Awaited<ReturnType<typeof getDictionary>>['login']
 }) => {
   const form = useForm({
-    resolver: schemaResolver(LoginSchema)
+    resolver: schemaResolver(LoginSchema),
   })
 
-  const onSubmit = form.handleSubmit(values => {
+  const onSubmit = form.handleSubmit((values) => {
     successToast('This is sparta')
     console.log({ values })
   })
@@ -33,7 +33,7 @@ export const LoginContent = ({
       />
       <InputGroup
         label={t.password}
-        type="password"
+        type='password'
         {...form.register('password')}
       />
       <button>{t.submitBtn}</button>

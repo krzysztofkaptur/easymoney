@@ -3,7 +3,7 @@ import login from './login.json'
 
 const translations = {
   ...home,
-  ...login
+  ...login,
 }
 
 export default translations
