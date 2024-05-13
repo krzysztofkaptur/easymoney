@@ -5,7 +5,7 @@ import { LoginContent } from './sections'
 import type { Locale } from '@/lib/i18n'
 
 type Props = {
-  params: { lang: Locale };
+  params: { lang: Locale }
 }
 
 export default async function Login({ params: { lang } }: Props) {
