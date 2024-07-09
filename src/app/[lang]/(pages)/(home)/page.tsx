@@ -4,6 +4,7 @@ import { getDictionary } from '@/lib/i18n/get-dictionary'
 import {
   Avatar,
   Badge,
+  Card,
   Checkbox,
   Combobox,
   Drawer,
@@ -42,6 +43,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Pagination />
       <Select />
       <Drawer />
+      <Card />
     </main>
   )
 }
