@@ -6,6 +6,7 @@ import {
   Badge,
   Checkbox,
   Combobox,
+  DropdownMenu,
   FAQ,
   Image,
   Modal,
@@ -34,6 +35,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Badge />
       <Checkbox />
       <Combobox />
+      <DropdownMenu />
     </main>
   )
 }
