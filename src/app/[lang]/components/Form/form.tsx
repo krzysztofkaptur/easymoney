@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Form as FormUI } from '@/app/[lang]/components/ui/form'
+import { Form as FormUI } from '@/app/[lang]/components/ui/Form/form'
 import { FieldValues, UseFormReturn } from 'react-hook-form'
 
 type Props = {
