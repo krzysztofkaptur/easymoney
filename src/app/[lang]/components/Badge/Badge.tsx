@@ -1,5 +1,5 @@
 import { Badge as BadgeUi } from '@/app/[lang]/components/ui'
 
-export function Badge() {
+export const Badge = () => {
   return <BadgeUi>Badge</BadgeUi>
 }

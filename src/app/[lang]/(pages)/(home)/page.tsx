@@ -10,6 +10,7 @@ import {
   FAQ,
   Image,
   Modal,
+  Pagination,
   Text,
 } from '@/app/[lang]/components'
 
@@ -36,6 +37,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Checkbox />
       <Combobox />
       <DropdownMenu />
+      <Pagination />
     </main>
   )
 }

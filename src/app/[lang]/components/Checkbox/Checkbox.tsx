@@ -2,7 +2,7 @@
 
 import { Checkbox as UiCheckbox } from '@/app/[lang]/components/ui'
 
-export function Checkbox() {
+export const Checkbox = () => {
   return (
     <div className='flex items-center space-x-2'>
       <UiCheckbox id='terms' />
