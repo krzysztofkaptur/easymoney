@@ -11,6 +11,7 @@ import {
   Image,
   Modal,
   Pagination,
+  Select,
   Text,
 } from '@/app/[lang]/components'
 
@@ -38,6 +39,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Combobox />
       <DropdownMenu />
       <Pagination />
+      <Select />
     </main>
   )
 }
