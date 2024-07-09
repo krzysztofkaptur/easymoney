@@ -1,4 +1,5 @@
-export { Text } from './Text'
+export { Avatar } from './Avatar'
+export { FAQ } from './FAQ'
 export { Image } from './Image'
 export { Modal } from './Modal'
-export { FAQ } from './FAQ'
+export { Text } from './Text'
