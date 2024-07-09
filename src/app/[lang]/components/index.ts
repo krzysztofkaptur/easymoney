@@ -1,5 +1,7 @@
 export { Avatar } from './Avatar'
 export { Badge } from './Badge'
+export { Checkbox } from './Checkbox'
+export { Error } from './Error'
 export { FAQ } from './FAQ'
 export { Image } from './Image'
 export { Modal } from './Modal'

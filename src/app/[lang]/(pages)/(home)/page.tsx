@@ -1,7 +1,15 @@
 import { db } from '@/lib/db'
 import { todos } from '@/lib/db'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
-import { Avatar, Badge, Text, Image, Modal, FAQ } from '@/app/[lang]/components'
+import {
+  Avatar,
+  Badge,
+  Checkbox,
+  FAQ,
+  Image,
+  Modal,
+  Text,
+} from '@/app/[lang]/components'
 
 import type { Locale } from '@/lib/i18n'
 
@@ -23,6 +31,7 @@ export default async function Home({ params: { lang } }: Props) {
       <FAQ />
       <Avatar />
       <Badge />
+      <Checkbox />
     </main>
   )
 }
