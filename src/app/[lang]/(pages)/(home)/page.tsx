@@ -6,6 +6,7 @@ import {
   Badge,
   Checkbox,
   Combobox,
+  Drawer,
   DropdownMenu,
   FAQ,
   Image,
@@ -40,6 +41,7 @@ export default async function Home({ params: { lang } }: Props) {
       <DropdownMenu />
       <Pagination />
       <Select />
+      <Drawer />
     </main>
   )
 }
