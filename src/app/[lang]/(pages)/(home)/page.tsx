@@ -2,6 +2,7 @@ import { db } from '@/lib/db'
 import { todos } from '@/lib/db'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
 import { Text, Image, Modal, FAQ } from '@/app/[lang]/components'
+import { Avatar } from '@/app/[lang]/components'
 
 import type { Locale } from '@/lib/i18n'
 
@@ -21,6 +22,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Text variant='h1'>{t.home.title}</Text>
       <Modal />
       <FAQ />
+      <Avatar />
     </main>
   )
 }
