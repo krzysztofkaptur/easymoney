@@ -1,4 +1,5 @@
 export { Avatar } from './Avatar'
+export { Badge } from './Badge'
 export { FAQ } from './FAQ'
 export { Image } from './Image'
 export { Modal } from './Modal'
