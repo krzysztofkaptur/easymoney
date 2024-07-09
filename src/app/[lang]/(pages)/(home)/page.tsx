@@ -5,6 +5,7 @@ import {
   Avatar,
   Badge,
   Checkbox,
+  Combobox,
   FAQ,
   Image,
   Modal,
@@ -32,6 +33,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Avatar />
       <Badge />
       <Checkbox />
+      <Combobox />
     </main>
   )
 }
