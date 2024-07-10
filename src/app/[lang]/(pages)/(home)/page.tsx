@@ -15,6 +15,7 @@ import {
   Modal,
   Pagination,
   Select,
+  Skeleton,
   Switch,
   Table,
   Tabs,
@@ -59,6 +60,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Calendar />
       <DatePicker />
       <Table />
+      <Skeleton />
     </main>
   )
 }
