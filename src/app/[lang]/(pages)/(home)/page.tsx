@@ -21,6 +21,7 @@ import {
   Tabs,
   Text,
   Textarea,
+  ThemeToggle,
   Toast,
   Tooltip,
 } from '@/components'
@@ -39,6 +40,7 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <main>
+      <ThemeToggle />
       <Image src='/images/next.svg' alt='' width={100} height={20} />
       <Text variant='h1'>{t.home.title}</Text>
       <Modal />
