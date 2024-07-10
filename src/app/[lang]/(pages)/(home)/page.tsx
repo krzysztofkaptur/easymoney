@@ -13,6 +13,7 @@ import {
   Modal,
   Pagination,
   Select,
+  Switch,
   Text,
   Textarea,
 } from '@/components'
@@ -45,6 +46,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Drawer />
       <Card />
       <Textarea />
+      <Switch />
     </main>
   )
 }
