@@ -15,6 +15,7 @@ import {
   Pagination,
   Select,
   Text,
+  Textarea,
 } from '@/app/[lang]/components'
 
 import type { Locale } from '@/lib/i18n'
@@ -44,6 +45,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Select />
       <Drawer />
       <Card />
+      <Textarea />
     </main>
   )
 }
