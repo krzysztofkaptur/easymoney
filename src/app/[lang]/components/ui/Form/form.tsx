@@ -13,7 +13,7 @@ import {
 } from 'react-hook-form'
 
 import { cn } from '@/lib/utils'
-import { Label } from '@/app/[lang]/components/ui/Label/Label'
+import { Label } from '@/ui'
 
 import type {
   HTMLAttributes,
