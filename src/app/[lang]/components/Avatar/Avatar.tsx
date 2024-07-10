@@ -1,8 +1,4 @@
-import {
-  Avatar as UiAvatar,
-  AvatarFallback,
-  AvatarImage,
-} from '@/app/[lang]/components/ui'
+import { Avatar as UiAvatar, AvatarFallback, AvatarImage } from '@/ui'
 
 export const Avatar = () => {
   return (

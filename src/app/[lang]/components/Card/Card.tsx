@@ -15,7 +15,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/app/[lang]/components/ui'
+} from '@/ui'
 
 export const Card = () => {
   return (

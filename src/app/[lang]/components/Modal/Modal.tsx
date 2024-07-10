@@ -8,7 +8,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '@/app/[lang]/components/ui'
+} from '@/ui'
 
 export const Modal = () => {
   return (

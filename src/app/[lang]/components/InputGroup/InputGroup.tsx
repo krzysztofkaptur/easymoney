@@ -1,6 +1,6 @@
 import { ForwardedRef, forwardRef } from 'react'
 
-import { Label, Input, Error } from '@/app/[lang]/components/ui'
+import { Label, Input, Error } from '@/ui'
 
 import type { FieldError, FieldErrorsImpl, Merge } from 'react-hook-form'
 
