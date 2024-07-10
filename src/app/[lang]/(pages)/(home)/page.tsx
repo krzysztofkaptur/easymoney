@@ -16,6 +16,7 @@ import {
   Pagination,
   Select,
   Switch,
+  Table,
   Tabs,
   Text,
   Textarea,
@@ -57,6 +58,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Tooltip />
       <Calendar />
       <DatePicker />
+      <Table />
     </main>
   )
 }
