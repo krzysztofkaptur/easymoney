@@ -3,9 +3,11 @@ import { getDictionary } from '@/lib/i18n/get-dictionary'
 import {
   Avatar,
   Badge,
+  Calendar,
   Card,
   Checkbox,
   Combobox,
+  DatePicker,
   Drawer,
   DropdownMenu,
   FAQ,
@@ -53,6 +55,8 @@ export default async function Home({ params: { lang } }: Props) {
       <Tabs />
       <Toast />
       <Tooltip />
+      <Calendar />
+      <DatePicker />
     </main>
   )
 }

@@ -6,7 +6,7 @@ import {
   TooltipTrigger,
 } from '@/ui'
 
-export function Tooltip() {
+export const Tooltip = () => {
   return (
     <TooltipProvider>
       <UiTooltip>
