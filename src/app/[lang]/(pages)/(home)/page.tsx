@@ -18,6 +18,7 @@ import {
   Text,
   Textarea,
   Toast,
+  Tooltip,
 } from '@/components'
 
 import type { Locale } from '@/lib/i18n'
@@ -51,6 +52,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Switch />
       <Tabs />
       <Toast />
+      <Tooltip />
     </main>
   )
 }
