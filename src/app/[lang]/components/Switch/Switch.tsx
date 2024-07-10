@@ -1,6 +1,6 @@
 import { Label, Switch as UiSwitch } from '@/ui'
 
-export function Switch() {
+export const Switch = () => {
   return (
     <div className='flex items-center space-x-2'>
       <UiSwitch id='airplane-mode' />

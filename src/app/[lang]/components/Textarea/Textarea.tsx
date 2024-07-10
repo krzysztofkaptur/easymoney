@@ -1,5 +1,5 @@
 import { Textarea as UiTextarea } from '@/ui'
 
-export function Textarea() {
+export const Textarea = () => {
   return <UiTextarea placeholder='Type your message here.' />
 }

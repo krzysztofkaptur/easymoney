@@ -14,6 +14,7 @@ import {
   Pagination,
   Select,
   Switch,
+  Tabs,
   Text,
   Textarea,
 } from '@/components'
@@ -47,6 +48,7 @@ export default async function Home({ params: { lang } }: Props) {
       <Card />
       <Textarea />
       <Switch />
+      <Tabs />
     </main>
   )
 }
