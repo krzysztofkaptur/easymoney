@@ -1,4 +1,4 @@
-import { Badge as BadgeUi } from '@/app/[lang]/components/ui'
+import { Badge as BadgeUi } from '@/ui'
 
 export const Badge = () => {
   return <BadgeUi>Badge</BadgeUi>

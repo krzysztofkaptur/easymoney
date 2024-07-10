@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/app/[lang]/components/ui'
+} from '@/ui'
 
 export const Drawer = () => {
   return (

@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/app/[lang]/components/ui'
+} from '@/ui'
 
 export const FAQ = () => {
   return (

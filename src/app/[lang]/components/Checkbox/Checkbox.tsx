@@ -1,6 +1,6 @@
 'use client'
 
-import { Checkbox as UiCheckbox } from '@/app/[lang]/components/ui'
+import { Checkbox as UiCheckbox } from '@/ui'
 
 export const Checkbox = () => {
   return (

@@ -29,7 +29,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from '@/app/[lang]/components/ui'
+} from '@/ui'
 
 export const DropdownMenu = () => {
   return (

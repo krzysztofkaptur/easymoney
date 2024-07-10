@@ -1,5 +1,4 @@
-import { db } from '@/lib/db'
-import { todos } from '@/lib/db'
+import { db, todos } from '@/lib/db'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
 import {
   Avatar,
@@ -16,7 +15,7 @@ import {
   Select,
   Text,
   Textarea,
-} from '@/app/[lang]/components'
+} from '@/components'
 
 import type { Locale } from '@/lib/i18n'
 
