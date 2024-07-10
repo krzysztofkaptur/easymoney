@@ -2,11 +2,9 @@
 
 import { useForm } from 'react-hook-form'
 
-import { Form } from '@/app/[lang]/components/Form'
-import { InputGroup } from '@/app/[lang]/components/InputGroup'
+import { Form, InputGroup } from '@/components'
 import { LoginSchema } from '@/lib/validation/schemas/auth'
 import { schemaResolver } from '@/lib/validation/resolver'
-import { successToast } from '@/lib/toasts'
 
 import { type getDictionary } from '@/lib/i18n/get-dictionary'
 
@@ -20,7 +18,6 @@ export const LoginContent = ({
   })
 
   const onSubmit = form.handleSubmit((values) => {
-    successToast('This is sparta')
     console.log({ values })
   })
 

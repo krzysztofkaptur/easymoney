@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { dir } from 'i18next'
 
-import { LanguageSwitcher } from '@/app/[lang]/components/LanguageSwitcher'
-import { ToasterProvider } from '@/lib/toasts'
+import { LanguageSwitcher } from '@/components'
+import { Toaster } from '@/ui'
 
 import './globals.css'
 
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <LanguageSwitcher />
         {children}
-        <ToasterProvider />
+        <Toaster />
       </body>
     </html>
   )
