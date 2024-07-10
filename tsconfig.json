@@ -21,7 +21,8 @@
     "paths": {
       "@/*": ["*"],
       "@/components": ["app/[lang]/components"],
-      "@/ui": ["app/[lang]/components/ui"]
+      "@/ui": ["app/[lang]/components/ui"],
+      "@/providers": ["app/[lang]/providers"]
     },
     "types": ["node", "@testing-library/jest-dom"]
   },

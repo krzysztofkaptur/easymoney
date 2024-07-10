@@ -4,6 +4,7 @@ import { dir } from 'i18next'
 
 import { LanguageSwitcher } from '@/components'
 import { Toaster } from '@/ui'
+import { ThemeProvider } from '@/providers'
 
 import './globals.css'
 
@@ -31,7 +32,14 @@ export default function RootLayout({
     <html lang={params.lang} dir={dir(params.lang)}>
       <body className={inter.className}>
         <LanguageSwitcher />
-        {children}
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>
