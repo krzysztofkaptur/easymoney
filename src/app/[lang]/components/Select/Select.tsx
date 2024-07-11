@@ -1,6 +1,9 @@
+// todo: add clear functionality
+
 import * as React from 'react'
 
 import {
+  Label,
   Select as UiSelect,
   SelectContent,
   SelectGroup,
@@ -10,22 +13,40 @@ import {
   SelectValue,
 } from '@/ui'
 
-export const Select = () => {
+import type { SelectProps } from './types'
+
+export const Select = ({
+  id,
+  name,
+  label,
+  required,
+  placeholder,
+  options,
+  ...rest
+}: SelectProps) => {
   return (
-    <UiSelect>
-      <SelectTrigger className='w-[180px]'>
-        <SelectValue placeholder='Select a fruit' />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
-          <SelectItem value='apple'>Apple</SelectItem>
-          <SelectItem value='banana'>Banana</SelectItem>
-          <SelectItem value='blueberry'>Blueberry</SelectItem>
-          <SelectItem value='grapes'>Grapes</SelectItem>
-          <SelectItem value='pineapple'>Pineapple</SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </UiSelect>
+    <div>
+      {label && (
+        <Label htmlFor={id ?? name}>{required ? `${label}*` : label}</Label>
+      )}
+      <UiSelect {...rest}>
+        <SelectTrigger className='w-[180px]'>
+          <SelectValue placeholder={placeholder} />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            {options?.map((option) =>
+              option.value ? (
+                <SelectItem key={option.label} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ) : (
+                <SelectLabel key={option.label}>{option.label}</SelectLabel>
+              )
+            )}
+          </SelectGroup>
+        </SelectContent>
+      </UiSelect>
+    </div>
   )
 }
