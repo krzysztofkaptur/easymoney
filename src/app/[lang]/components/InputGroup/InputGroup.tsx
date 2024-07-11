@@ -2,26 +2,17 @@ import { ForwardedRef, forwardRef } from 'react'
 
 import { Label, Input, Error } from '@/ui'
 
-import type { FieldError, FieldErrorsImpl, Merge } from 'react-hook-form'
-
-type Props = {
-  id?: string
-  label: string
-  name: string
-  required?: boolean
-  type?: React.HTMLInputTypeAttribute
-  error?: string | FieldError | Merge<FieldError, FieldErrorsImpl<any>>
-}
+import type { InputGroupProps } from './types'
 
 const InputGroup = forwardRef(
-  (props: Props, ref: ForwardedRef<HTMLInputElement>) => {
+  (props: InputGroupProps, ref: ForwardedRef<HTMLInputElement>) => {
     const {
       id,
       name,
       label,
-      type = 'text',
       required = false,
       error,
+      disabled,
       ...rest
     } = props
 
@@ -32,7 +23,7 @@ const InputGroup = forwardRef(
           ref={ref}
           id={id ?? name}
           name={name ?? name}
-          type={type}
+          disabled={disabled}
           {...rest}
         />
         {error ? <Error error={error as string} /> : null}
