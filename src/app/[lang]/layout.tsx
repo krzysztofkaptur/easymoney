@@ -6,7 +6,7 @@ import { LanguageSwitcher } from '@/components'
 import { Toaster } from '@/ui'
 import { ThemeProvider } from '@/providers'
 
-import './globals.css'
+import '@/styles/globals.css'
 
 import { i18n, type Locale } from '@/lib/i18n'
 

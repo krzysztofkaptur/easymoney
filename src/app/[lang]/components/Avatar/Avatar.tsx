@@ -1,10 +1,12 @@
 import { Avatar as UiAvatar, AvatarFallback, AvatarImage } from '@/ui'
 
-export const Avatar = () => {
+import type { AvatarProps } from './types'
+
+export const Avatar = ({ src, alt, fallback }: AvatarProps) => {
   return (
     <UiAvatar>
-      <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarImage src={src} alt={alt} />
+      <AvatarFallback>{fallback}</AvatarFallback>
     </UiAvatar>
   )
 }
