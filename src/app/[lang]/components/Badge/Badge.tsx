@@ -1,5 +1,7 @@
 import { Badge as BadgeUi } from '@/ui'
 
-export const Badge = () => {
-  return <BadgeUi>Badge</BadgeUi>
+import type { BadgeProps } from './types'
+
+export const Badge = ({ text, variant }: BadgeProps) => {
+  return <BadgeUi variant={variant}>{text}</BadgeUi>
 }
