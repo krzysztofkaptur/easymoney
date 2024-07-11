@@ -20,7 +20,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       >
         <input
           type={showPassword ? 'text' : type}
-          className='w-full  text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50'
+          className='w-full bg-transparent text-sm ring-offset-background file:border-0 file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50'
           ref={ref}
           {...props}
         />

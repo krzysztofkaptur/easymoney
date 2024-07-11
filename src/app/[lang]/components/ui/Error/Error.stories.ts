@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { Error } from './Error'
 
 const meta = {
-  title: 'Components/Error',
+  title: 'Ui/Error',
   component: Error,
   parameters: {
     layout: 'centered',
