@@ -18,7 +18,9 @@ const InputGroup = forwardRef(
 
     return (
       <div>
-        <Label htmlFor={id ?? name}>{required ? `${label}*` : label}</Label>
+        <Label htmlFor={id ?? name} className='text-gray-700'>
+          {required ? `${label}*` : label}
+        </Label>
         <Input
           ref={ref}
           id={id ?? name}

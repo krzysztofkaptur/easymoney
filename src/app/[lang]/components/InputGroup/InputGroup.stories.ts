@@ -1,3 +1,5 @@
+// todo: add password input
+
 import { InputGroup } from './InputGroup'
 
 import type { Meta, StoryObj } from '@storybook/react'
