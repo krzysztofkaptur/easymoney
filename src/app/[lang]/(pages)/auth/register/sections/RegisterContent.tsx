@@ -5,17 +5,17 @@ import Link from 'next/link'
 
 import { Form, InputGroup, Text, Divider } from '@/components'
 import { Button } from '@/ui'
-import { LoginSchema, schemaResolver } from '@/lib/validation'
+import { RegisterSchema, schemaResolver } from '@/lib/validation'
 
-import { type getDictionary } from '@/lib/i18n/get-dictionary'
+import type { getDictionary } from '@/lib/i18n/get-dictionary'
 
-export const LoginContent = ({
+export const RegisterContent = ({
   t,
 }: {
-  t: Awaited<ReturnType<typeof getDictionary>>['login']
+  t: Awaited<ReturnType<typeof getDictionary>>['register']
 }) => {
   const form = useForm({
-    resolver: schemaResolver(LoginSchema),
+    resolver: schemaResolver(RegisterSchema),
   })
 
   const onSubmit = form.handleSubmit((values) => {
@@ -26,6 +26,7 @@ export const LoginContent = ({
     <div className='w-full max-w-md'>
       <Form {...form} onSubmit={onSubmit}>
         <div className='flex w-full max-w-md flex-col gap-6 self-center p-4'>
+          <Text className='text-xl'>{t.title}</Text>
           <InputGroup
             label={t.email}
             placeholder='yourname@provider.com'
@@ -38,12 +39,9 @@ export const LoginContent = ({
             {...form.register('password')}
           />
           <Button>{t.submitBtn}</Button>
-          <Text className='text-center text-sm'>
-            <Link href='/'>Forgot password?</Link>
-          </Text>
           <Divider />
           <Text className='text-sm'>
-            Need an account? <Link href='/auth/register'>Register</Link>
+            {t.loginText} <Link href='/auth/login'>{t.link}</Link>
           </Text>
         </div>
       </Form>
