@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { db, todos } from '@/lib/db'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
 import {
@@ -65,6 +66,8 @@ const selectOptions = [
 ]
 
 export default async function Home({ params: { lang } }: Props) {
+  const footerSample = <Badge text='badge' />
+
   const data = await db.select().from(todos)
   const t = await getDictionary(lang)
 
@@ -72,14 +75,14 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <main>
-      <Select label='Sample' name='sample' options={selectOptions} />
+      <Card footer={footerSample}>Some content</Card>
       {/* <ThemeToggle />
       <Avatar src='https://github.com/shadcn.png' alt='@shadcn' fallback='CN' />
       <InputGroup name='test' label='Test' />
       <Badge text='badge' />
       <Image src='/images/next.svg' alt='' width={100} height={20} />
+      <Select label='Sample' name='sample' options={selectOptions} />
       <Text variant='h1'>{t.home.title}</Text>
-      <Card />
       <Modal />
       <FAQ />
       <Checkbox />
