@@ -33,6 +33,37 @@ type Props = {
   params: { lang: Locale }
 }
 
+const selectOptions = [
+  {
+    label: 'Fruits',
+    title: true,
+  },
+  {
+    label: 'Apple',
+    value: 'apple',
+  },
+  {
+    label: 'Banana',
+    value: 'banana',
+  },
+  {
+    label: 'Blueberry',
+    value: 'blueberry',
+  },
+  {
+    label: 'Grapes',
+    value: 'grapes',
+  },
+  {
+    label: 'Grapes',
+    value: 'grapes',
+  },
+  {
+    label: 'Pineapple',
+    value: 'pineapple',
+  },
+]
+
 export default async function Home({ params: { lang } }: Props) {
   const data = await db.select().from(todos)
   const t = await getDictionary(lang)
@@ -41,9 +72,10 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <main>
-      <InputGroup name='test' label='Test' />
+      <Select label='Sample' name='sample' options={selectOptions} />
       {/* <ThemeToggle />
       <Avatar src='https://github.com/shadcn.png' alt='@shadcn' fallback='CN' />
+      <InputGroup name='test' label='Test' />
       <Badge text='badge' />
       <Image src='/images/next.svg' alt='' width={100} height={20} />
       <Text variant='h1'>{t.home.title}</Text>
@@ -54,7 +86,6 @@ export default async function Home({ params: { lang } }: Props) {
       <Combobox />
       <DropdownMenu />
       <Pagination />
-      <Select />
       <Drawer />
       <Textarea />
       <Switch />

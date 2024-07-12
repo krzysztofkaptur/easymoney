@@ -1,4 +1,4 @@
-import { Badge } from './Badge'
+import { Badge } from './'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
