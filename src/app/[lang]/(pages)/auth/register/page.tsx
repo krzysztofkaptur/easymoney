@@ -1,35 +1,13 @@
-'use client'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
 
-import { useForm } from 'react-hook-form'
+import { RegisterContent } from './sections'
 
-import { Form } from '@/app/[lang]/components/Form'
-import { InputGroup } from '@/app/[lang]/components/InputGroup'
-import { RegisterSchema } from '@/lib/validation/schemas/auth'
-import { schemaResolver } from '@/lib/validation/resolver'
+import { RegisterPageProps } from './types'
 
-export default function Register() {
-  const form = useForm({
-    resolver: schemaResolver(RegisterSchema),
-  })
+export default async function Register({
+  params: { lang },
+}: RegisterPageProps) {
+  const t = await getDictionary(lang)
 
-  const onSubmit = form.handleSubmit((values) => {
-    console.log({ values })
-  })
-
-  return (
-    <Form onSubmit={onSubmit} {...form}>
-      <InputGroup
-        label='Email'
-        error={form.formState?.errors?.email?.message}
-        {...form.register('email')}
-      />
-      <InputGroup
-        label='Password'
-        type='password'
-        error={form.formState?.errors?.password?.message}
-        {...form.register('password')}
-      />
-      <button>Register</button>
-    </Form>
-  )
+  return <RegisterContent t={t.register} />
 }

@@ -1,1 +1,1 @@
-export { LoginContent } from './content'
+export { LoginContent } from './LoginContent'

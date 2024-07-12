@@ -2,13 +2,9 @@ import { getDictionary } from '@/lib/i18n/get-dictionary'
 
 import { LoginContent } from './sections'
 
-import type { Locale } from '@/lib/i18n'
+import type { LoginPageProps } from './types'
 
-type Props = {
-  params: { lang: Locale }
-}
-
-export default async function Login({ params: { lang } }: Props) {
+export default async function Login({ params: { lang } }: LoginPageProps) {
   const t = await getDictionary(lang)
 
   return <LoginContent t={t.login} />
