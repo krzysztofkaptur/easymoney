@@ -11,9 +11,5 @@ type Props = {
 export default async function Login({ params: { lang } }: Props) {
   const t = await getDictionary(lang)
 
-  return (
-    <>
-      <LoginContent t={t.login} />
-    </>
-  )
+  return <LoginContent t={t.login} />
 }

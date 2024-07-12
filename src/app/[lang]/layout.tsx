@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang={params.lang} dir={dir(params.lang)}>
       <body className={inter.className}>
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
         <ThemeProvider
           attribute='class'
           defaultTheme='system'

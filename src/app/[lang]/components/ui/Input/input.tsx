@@ -7,6 +7,8 @@ import { cn } from '@/lib/utils'
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
+const PASSWORD_ICON_SIZE = 16
+
 const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
     const [showPassword, setShowPassword] = useState(false)
@@ -28,7 +30,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           <>
             {type === 'password' && !showPassword ? (
               <button onClick={() => setShowPassword(true)}>
-                <Eye />
+                <Eye size={PASSWORD_ICON_SIZE} />
               </button>
             ) : null}
           </>
@@ -37,7 +39,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           <>
             {type === 'password' && showPassword ? (
               <button onClick={() => setShowPassword(false)}>
-                <EyeOff />
+                <EyeOff size={PASSWORD_ICON_SIZE} />
               </button>
             ) : null}
           </>

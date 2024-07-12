@@ -1,10 +1,11 @@
 'use client'
 
 import { useForm } from 'react-hook-form'
+import Link from 'next/link'
 
-import { Form, InputGroup } from '@/components'
-import { LoginSchema } from '@/lib/validation/schemas/auth'
-import { schemaResolver } from '@/lib/validation/resolver'
+import { Form, InputGroup, Text, Divider } from '@/components'
+import { Button } from '@/ui'
+import { LoginSchema, schemaResolver } from '@/lib/validation'
 
 import { type getDictionary } from '@/lib/i18n/get-dictionary'
 
@@ -22,18 +23,30 @@ export const LoginContent = ({
   })
 
   return (
-    <Form onSubmit={onSubmit} {...form}>
-      <InputGroup
-        label={t.email}
-        {...form.register('email')}
-        error={form.formState?.errors?.email?.message}
-      />
-      <InputGroup
-        label={t.password}
-        type='password'
-        {...form.register('password')}
-      />
-      <button>{t.submitBtn}</button>
-    </Form>
+    <div className='w-full max-w-md'>
+      <Form {...form} onSubmit={onSubmit}>
+        <div className='flex w-full max-w-md flex-col gap-6 self-center p-4'>
+          <InputGroup
+            label={t.email}
+            placeholder='yourname@provider.com'
+            error={form.formState?.errors?.email?.message}
+            {...form.register('email')}
+          />
+          <InputGroup
+            label={t.password}
+            type='password'
+            {...form.register('password')}
+          />
+          <Button>{t.submitBtn}</Button>
+          <Text className='text-center text-sm'>
+            <Link href='/'>Forgot password?</Link>
+          </Text>
+          <Divider />
+          <Text className='text-sm'>
+            Need an account? <Link href='/auth/register'>Register</Link>
+          </Text>
+        </div>
+      </Form>
+    </div>
   )
 }

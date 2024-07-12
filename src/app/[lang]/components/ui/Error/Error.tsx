@@ -3,5 +3,5 @@ type Props = {
 }
 
 export const Error = ({ error }: Props) => {
-  return <span>{error}</span>
+  return <span className='text-xs text-red-600'>{error}</span>
 }

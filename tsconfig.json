@@ -23,7 +23,9 @@
       "@/components": ["app/[lang]/components"],
       "@/ui": ["app/[lang]/components/ui"],
       "@/providers": ["app/[lang]/providers"],
-      "@/styles/*": ["app/styles/*"]
+      "@/styles/*": ["app/styles/*"],
+      "@/lib/*": ["lib/*"],
+      "@/hooks": ["app/[lang]/hooks"]
     },
     "types": ["node", "@testing-library/jest-dom"]
   },
